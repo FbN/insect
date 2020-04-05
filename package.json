@@ -9,6 +9,7 @@
     "url": "git+https://github.com/sharkdp/insect.git"
   },
   "homepage": "https://github.com/sharkdp/insect",
+  "main": "insect.js",
   "bin": {
     "insect": "./index.js"
   },
@@ -17,7 +18,6 @@
     "test": "test"
   },
   "scripts": {
-    "postinstall": "psc-package install && npm run browserify && npm run copy",
     "copy": "node copy",
     "start": "run-p server browserify:watch",
     "browserify:watch": "pulp -w browserify --skip-entry-point -m Insect --standalone Insect -O -t insect.js",
